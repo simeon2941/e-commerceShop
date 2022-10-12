@@ -15,7 +15,6 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-
       <div
         class="collapse navbar-collapse"
         id="navbarNav"
@@ -25,13 +24,6 @@
           <li class="nav-item">
             <a routerLink="/" class="nav-link">Home</a>
           </li>
-
-          <li class="nav-item">
-            <app-sub-menu></app-sub-menu>
-
-          </li>
-
-
           <li class="nav-item" *ngIf="auth.isAuthenticated$ | async">
             <a routerLink="external-api" class="nav-link">External API</a>
           </li>
