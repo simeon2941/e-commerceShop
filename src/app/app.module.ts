@@ -12,7 +12,6 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HeroComponent } from './components/hero/hero.component';
 import { HomeContentComponent } from './components/home-content/home-content.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { ExternalApiComponent } from './pages/external-api/external-api.component';
@@ -22,7 +21,13 @@ import { environment as env } from '../environments/environment';
 import { SubMenuComponent } from './components/sub-menu/sub-menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
-
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from '../app/in-memory-data.service';
+import { HeroesComponent } from './components/heroes/heroes.component';
+import { FormsModule } from '@angular/forms';
+import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HeroSearchComponent } from './components/hero-search/hero-search.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
@@ -31,17 +36,24 @@ import {MatMenuModule} from '@angular/material/menu';
     ProfileComponent,
     NavBarComponent,
     FooterComponent,
-    HeroComponent,
+    HeroesComponent,
     HomeContentComponent,
     LoadingComponent,
     ExternalApiComponent,
     ErrorComponent,
-    SubMenuComponent
+    SubMenuComponent,
+    HeroesComponent,
+    HeroDetailComponent,
+    DashboardComponent,
+    HeroSearchComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    ),
     NgbModule,
     HighlightModule,
     FontAwesomeModule,
@@ -52,7 +64,7 @@ import {MatMenuModule} from '@angular/material/menu';
       }
     }),
     BrowserAnimationsModule,
-    MatMenuModule
+    MatMenuModule,FormsModule
 
   ],
   providers: [
