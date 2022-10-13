@@ -8,9 +8,9 @@ import { User } from '../../users';
 import {UserService} from '../../user.service';
 
 @Component({
-  selector: 'app-hero-detail',
-  templateUrl: './hero-detail.component.html',
-  styleUrls: [ './hero-detail.component.css' ]
+  selector: 'app-user-detail',
+  templateUrl: './user-detail.component.html',
+  styleUrls: [ './user-detail.component.css' ]
 })
 export class HeroDetailComponent implements OnInit {
   user: User | undefined;
