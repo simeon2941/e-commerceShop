@@ -14,7 +14,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeContentComponent } from './components/home-content/home-content.component';
 import { LoadingComponent } from './components/loading/loading.component';
-import { ExternalApiComponent } from './pages/external-api/external-api.component';
+
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthHttpInterceptor, AuthModule } from '@auth0/auth0-angular';
 import { environment as env } from '../environments/environment';
@@ -27,7 +27,9 @@ import { HeroesComponent } from './components/users/users.component';
 import { FormsModule } from '@angular/forms';
 import { HeroDetailComponent } from './components/user-detail/user-detail.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { HeroSearchComponent } from './components/user-search/user-search.component'; // <-- NgModel lives here
+import { HeroSearchComponent } from './components/user-search/user-search.component';
+import { ProductDetailsComponent } from './components/product-detail/product-details.component';
+import { CartComponent } from './components/cart/cart.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
@@ -39,13 +41,14 @@ import { HeroSearchComponent } from './components/user-search/user-search.compon
     HeroesComponent,
     HomeContentComponent,
     LoadingComponent,
-    ExternalApiComponent,
     ErrorComponent,
     SubMenuComponent,
     HeroesComponent,
     HeroDetailComponent,
     DashboardComponent,
     HeroSearchComponent,
+    ProductDetailsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
