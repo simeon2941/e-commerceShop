@@ -6,7 +6,8 @@ import { ExternalApiComponent } from './pages/external-api/external-api.componen
 import { ErrorComponent } from './pages/error/error.component';
 import { AuthGuard } from '@auth0/auth0-angular';
 import {DashboardComponent } from './components/dashboard/dashboard.component';
-import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
+import { HeroDetailComponent } from './components/user-detail/user-detail.component';
+import { HomeContentComponent } from './components/home-content/home-content.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,11 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
+
+  },
+  {
+    path: 'home',
+    component: HomeContentComponent,
 
   },
   {
