@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
+
 import { User } from './users';
 import { MessageService } from '../app/message.service';
 
@@ -23,13 +24,22 @@ export class UserService {
     private http: HttpClient,
     private messageService: MessageService) { }
 
-    getUsers(): Observable<User[]> {
+    // getUsers(): Observable<User[]> {
+    //   return this.http.get<User[]>(this.usersUrl)
+    //     .pipe(
+    //       tap(_ => this.log('fetched users')),
+    //       catchError(this.handleError<User[]>('getUsers', []))
+    //     );
+    // }
+
+    getUsers (): Observable<User[]> {
       return this.http.get<User[]>(this.usersUrl)
         .pipe(
           tap(_ => this.log('fetched users')),
           catchError(this.handleError<User[]>('getUsers', []))
         );
     }
+
 
     getUserNo404<Data>(id: number): Observable<User> {
       const url = `${this.usersUrl}/?id=${id}`;

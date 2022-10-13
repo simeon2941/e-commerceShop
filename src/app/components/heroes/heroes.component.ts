@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Hero } from '../../hero';
-import { HeroService } from '../../hero.service';
+// import { Hero } from '../../hero';
+// import { HeroService } from '../../hero.service';
+
+import { User } from '../../users';
+import {UserService} from '../../user.service';
 
 @Component({
   selector: 'app-heroes',
@@ -9,31 +12,31 @@ import { HeroService } from '../../hero.service';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-  heroes: Hero[] = [];
+  users: User[] = [];
 
-  constructor(private heroService: HeroService) { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    this.getHeroes();
+    this.getUsers();
   }
 
-  getHeroes(): void {
-    this.heroService.getHeroes()
-    .subscribe(heroes => this.heroes = heroes);
+  getUsers(): void {
+    this.userService.getUsers()
+    .subscribe(users => this.users = users);
   }
 
   add(name: string): void {
     name = name.trim();
     if (!name) { return; }
-    this.heroService.addHero({ name } as Hero)
-      .subscribe(hero => {
-        this.heroes.push(hero);
+    this.userService.addUser({ name } as User)
+      .subscribe(user => {
+        this.users.push(user);
       });
   }
 
-  delete(hero: Hero): void {
-    this.heroes = this.heroes.filter(h => h !== hero);
-    this.heroService.deleteHero(hero.id).subscribe();
+  delete(user: User): void {
+    this.users = this.users.filter(h => h !== user);
+    this.userService.deleteUser(user.id).subscribe();
   }
 
 }
