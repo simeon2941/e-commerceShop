@@ -29,9 +29,6 @@
           </li>
 
 
-          <li class="nav-item" *ngIf="auth.isAuthenticated$ | async">
-            <a routerLink="external-api" class="nav-link">External API</a>
-          </li>
 
           <li class="nav-item" *ngIf="auth.isAuthenticated$ | async">
             <button mat-button [matMenuTriggerFor]="menu">Menu</button>
