@@ -24,12 +24,13 @@ import {MatMenuModule} from '@angular/material/menu';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from '../app/in-memory-data.service';
 import { HeroesComponent } from './components/users/users.component';
-import { FormsModule } from '@angular/forms';
-import { HeroDetailComponent } from './components/user-detail/user-detail.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserDetailComponent } from './components/user-detail/user-detail.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeroSearchComponent } from './components/user-search/user-search.component';
 import { ProductDetailsComponent } from './components/product-detail/product-details.component';
-import { CartComponent } from './components/cart/cart.component'; // <-- NgModel lives here
+import { CartComponent } from './components/cart/cart.component';
+import { ProductListComponent } from './components/product-list/product-list.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
@@ -44,11 +45,12 @@ import { CartComponent } from './components/cart/cart.component'; // <-- NgModel
     ErrorComponent,
     SubMenuComponent,
     HeroesComponent,
-    HeroDetailComponent,
+    UserDetailComponent,
     DashboardComponent,
     HeroSearchComponent,
     ProductDetailsComponent,
-    CartComponent
+    CartComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +62,7 @@ import { CartComponent } from './components/cart/cart.component'; // <-- NgModel
     NgbModule,
     HighlightModule,
     FontAwesomeModule,
+    ReactiveFormsModule,
     AuthModule.forRoot({
       ...env.auth,
       httpInterceptor: {
