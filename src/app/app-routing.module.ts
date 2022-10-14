@@ -6,45 +6,36 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { AuthGuard } from '@auth0/auth0-angular';
 import {DashboardComponent } from './components/dashboard/dashboard.component';
-import { HeroDetailComponent } from './components/user-detail/user-detail.component';
+import { UserDetailComponent } from './components/user-detail/user-detail.component';
 import { HomeContentComponent } from './components/home-content/home-content.component';
 import { ProductDetailsComponent } from './components/product-detail/product-details.component';
 import { CartComponent } from './components/cart/cart.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
 
 const routes: Routes = [
 
-  { path: '', component: HomeContentComponent },
-  { path: 'products/:productId', component: ProductDetailsComponent},
-  { path: 'cart', component: CartComponent}
+  { path: '', component: ProductListComponent },
+  { path: 'products/:productId', component: ProductDetailsComponent },
+  { path: 'cart', component: CartComponent},
 
   // { path: '', component: HomeContentComponent },
-  // {
-  //   path: 'profile',
-  //   component: ProfileComponent,
-  //   canActivate: [AuthGuard],
-  // },
-  //   {
-  //   path: 'products',
-  //   component: ProductDetailsComponent,
+  {
+    path: 'profile',
+    component: ProfileComponent,
+    canActivate: [AuthGuard],
+  },
 
-  // },
-  // { path: 'detail/:id', component: HeroDetailComponent },
-  // { path: 'products/:productId', component: ProductDetailsComponent},
-  // { path: 'cart', component: CartComponent},
-  // {
-  //   path: 'dashboard',
-  //   component: DashboardComponent,
+  { path: 'detail/:id', component: UserDetailComponent },
+  { path: 'cart', component: CartComponent},
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
 
-  // },
-  // // {
-  // //   path: 'home',
-  // //   component: HomeContentComponent,
-
-  // // },
-  // {
-  //   path: 'error',
-  //   component: ErrorComponent,
-  // },
+  },
+  {
+    path: 'error',
+    component: ErrorComponent,
+  },
 
 ];
 

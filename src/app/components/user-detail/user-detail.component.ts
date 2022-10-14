@@ -12,7 +12,7 @@ import {UserService} from '../../user.service';
   templateUrl: './user-detail.component.html',
   styleUrls: [ './user-detail.component.css' ]
 })
-export class HeroDetailComponent implements OnInit {
+export class UserDetailComponent implements OnInit {
   user: User | undefined;
 
   constructor(
