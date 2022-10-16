@@ -31,7 +31,6 @@ import { HeroSearchComponent } from './components/user-search/user-search.compon
 import { ProductDetailsComponent } from './components/product-detail/product-details.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ProductListComponent } from './components/product-list/product-list.component'; // <-- NgModel lives here
-
 @NgModule({
   declarations: [
     AppComponent,
