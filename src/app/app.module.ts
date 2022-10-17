@@ -14,6 +14,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeContentComponent } from './components/home-content/home-content.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthHttpInterceptor, AuthModule } from '@auth0/auth0-angular';
@@ -60,6 +61,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
     ),
     NgbModule,
     HighlightModule,
+    MatGridListModule,
     FontAwesomeModule,
     ReactiveFormsModule,
     AuthModule.forRoot({
