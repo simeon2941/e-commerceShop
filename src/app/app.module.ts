@@ -32,6 +32,10 @@ import { HeroSearchComponent } from './components/user-search/user-search.compon
 import { ProductDetailsComponent } from './components/product-detail/product-details.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ProductListComponent } from './components/product-list/product-list.component'; // <-- NgModel lives here
+import { MatCardModule} from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +64,6 @@ import { ProductListComponent } from './components/product-list/product-list.com
       InMemoryDataService, { dataEncapsulation: false }
     ),
     NgbModule,
-    HighlightModule,
     MatGridListModule,
     FontAwesomeModule,
     ReactiveFormsModule,
@@ -71,7 +74,11 @@ import { ProductListComponent } from './components/product-list/product-list.com
       }
     }),
     BrowserAnimationsModule,
-    MatMenuModule,FormsModule
+    MatMenuModule,FormsModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatButtonModule,
+    FlexLayoutModule,
 
   ],
   providers: [
