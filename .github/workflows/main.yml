@@ -19,7 +19,7 @@ jobs:
 
       - name: Install and build
         working-directory: ./e-commerceShop
-        run: npm install && npm run gh-build && cp dist/e-commerceShop/index.html
+        run: npm install && npm run gh-build && cp dist/login-demo/index.html dist/login-demo/404.html
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
