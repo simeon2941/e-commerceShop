@@ -1,37 +1,63 @@
 <h2>Products</h2>
 
-<!-- <div *ngFor="let product of products" class="product-item">
-  <h3>
-    <a [title]="product.name + ' details'" [routerLink]="['products',product.id]">
-      {{ product.name }}
-    </a>
-  </h3>
-  <p *ngIf="product.description">
-    Description: {{ product.description }}
-  </p>
-  <button (click)="share(product.name)">
-    Share
-  </button>
-</div> -->
 
+<mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'">
+  <mdb-carousel-item>
+    <img
+      src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).webp"
+      class="d-block w-100"
+      alt="..."
+    />
+    <div class="carousel-caption d-none d-md-block">
+      <h5>First slide label</h5>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <img
+      src="https://mdbootstrap.com/img/Photos/Slides/img%20(22).webp"
+      class="d-block w-100"
+      alt="..."
+    />
+    <div class="carousel-caption d-none d-md-block">
+      <h5>Second slide label</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <img
+      src="https://mdbootstrap.com/img/Photos/Slides/img%20(23).webp"
+      class="d-block w-100"
+      alt="..."
+    />
+    <div class="carousel-caption d-none d-md-block">
+      <h5>Third slide label</h5>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </mdb-carousel-item>
+</mdb-carousel>
 
-<mat-toolbar color="primary">
-  Card view demo
-</mat-toolbar>
-<div class="content">
-  <mat-card class="mat-elevation-z4">
-    <mat-card-header>
-      <mat-card-title>Himalayan Peaks</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image src="./../assets/images/mountains.jpg">
-    <mat-card-content>
-      <p>
-        The Himalayas is a mountain range in Asia.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
+<div class="content" >
+  <div fxLayout="row wrap" fxLayoutGap="16px grid" fxFlexFill>
+    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let product of products" class="product-item">
+      <mat-card class="mat-elevation-z4" >
+        <mat-card-header>
+          <mat-card-title >
+          <a [routerLink]="['products',product.id]">{{product.name}}</a>
+        </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image [routerLink]="['products',product.id]" src="../../../assets/logo.png">
+        <mat-card-content>
+          <p *ngIf="product.description">
+            Description: {{ product.description }}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button (click)="share(product.name)">
+            Share
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
 </div>
