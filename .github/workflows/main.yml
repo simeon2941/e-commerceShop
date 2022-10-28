@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v1
 
       - name: Install and build
-        working-directory: ./e-commerceShop
+        working-directory: ./
         run: npm install && npm run gh-build && cp dist/login-demo/index.html dist/login-demo/404.html
 
       - name: Deploy
