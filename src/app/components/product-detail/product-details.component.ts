@@ -4,7 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Product, products } from '../../products';
 import { CartService } from '../../cart.service';
 
-
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSnackBarConfig } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
@@ -13,14 +14,20 @@ import { CartService } from '../../cart.service';
 export class ProductDetailsComponent implements OnInit {
 
   product: Product | undefined;
-
   constructor(
     private route: ActivatedRoute,
-    private cartService: CartService) { }
+    private cartService: CartService,
+    private snackBar: MatSnackBar
+    ) {
+
+    }
 
   addToCart(product: Product) {
     this.cartService.addToCart(product);
-    window.alert('Your product has been added to the cart!');
+    this.snackBar.open('Your product has been added to the cart!', 'Dismiss', {
+      duration: 3000,
+      panelClass: ['my-snackbar-style']
+  });
   }
 
   ngOnInit() {

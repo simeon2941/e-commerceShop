@@ -4,6 +4,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import json from 'highlight.js/lib/languages/json';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -51,6 +52,7 @@ import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
 import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -88,9 +90,11 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
         ...env.httpInterceptor,
       }
     }),
+    MatSnackBarModule,
     BrowserAnimationsModule,
     HighlightModule,
-    MatMenuModule,FormsModule,
+    MatMenuModule,
+    FormsModule,
     MatCardModule,
     MatToolbarModule,
     MatButtonModule,
