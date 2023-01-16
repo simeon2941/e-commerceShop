@@ -165,7 +165,7 @@
     "uuid" "8.3.2"
     "yargs" "17.5.1"
 
-"@angular/common@^14.0.0", "@angular/common@^14.0.0 || ^15.0.0", "@angular/common@^14.0.1", "@angular/common@^14.1.0", "@angular/common@>=12 <=14", "@angular/common@>=8.0.0", "@angular/common@14.2.6":
+"@angular/common@^14.0.0", "@angular/common@^14.0.0 || ^15.0.0", "@angular/common@^14.0.1", "@angular/common@^14.1.0", "@angular/common@>=12 <=14", "@angular/common@>=14.0.0-0", "@angular/common@>=8.0.0", "@angular/common@14.2.6":
   "integrity" "sha512-WNX7xe8LKP5DHPlae+c77PDwj0iIAAPIe1lWbhQysyi8uttbtL9VVP2XTFuQ3E6oVHJr+0IR0LMVGJ+a8i6zsw=="
   "resolved" "https://registry.npmjs.org/@angular/common/-/common-14.2.6.tgz"
   "version" "14.2.6"
@@ -200,7 +200,7 @@
   "resolved" "https://registry.npmjs.org/@angular/compiler/-/compiler-9.0.0.tgz"
   "version" "9.0.0"
 
-"@angular/core@^14.0.0", "@angular/core@^14.0.0 || ^15.0.0", "@angular/core@^14.0.1", "@angular/core@^14.1.0", "@angular/core@>=12 <=14", "@angular/core@>=8.0.0", "@angular/core@14.2.6":
+"@angular/core@^14.0.0", "@angular/core@^14.0.0 || ^15.0.0", "@angular/core@^14.0.1", "@angular/core@^14.1.0", "@angular/core@>=12 <=14", "@angular/core@>=14.0.0-0", "@angular/core@>=8.0.0", "@angular/core@14.2.6":
   "integrity" "sha512-fEIz7E488X03tLIqmWQRpahxRRU2SMjb9i/rMUjMQJkbppJC3cykl31bCYzeixNO+zpE55GPGuQX2qI/yDenZA=="
   "resolved" "https://registry.npmjs.org/@angular/core/-/core-14.2.6.tgz"
   "version" "14.2.6"
@@ -254,7 +254,7 @@
   dependencies:
     "tslib" "^2.3.0"
 
-"@angular/platform-browser@^14.0.0", "@angular/platform-browser@^14.0.0 || ^15.0.0", "@angular/platform-browser@^14.0.1", "@angular/platform-browser@14.2.6":
+"@angular/platform-browser@^14.0.0", "@angular/platform-browser@^14.0.0 || ^15.0.0", "@angular/platform-browser@^14.0.1", "@angular/platform-browser@>=14.0.0-0", "@angular/platform-browser@14.2.6":
   "integrity" "sha512-KQUN4YVYEK5NOL7QFnDulQta6tm9rPh/mruX/XCLkSmoRMlFBmsHyjx+VJBnBNUbUxNsBj7kknifOu9PqDgAWg=="
   "resolved" "https://registry.npmjs.org/@angular/platform-browser/-/platform-browser-14.2.6.tgz"
   "version" "14.2.6"
@@ -5207,6 +5207,13 @@
     "highlight.js" "^10.0.0"
     "highlightjs-line-numbers.js" "^2.8.0"
     "tslib" "^2.0.0"
+
+"ngx-toastr@^16.0.2":
+  "integrity" "sha512-J6SueNCaGwm/gpXdsG56UzMEAcuayYWEW6NmIrNoe5iP7lOUohg4xYXWipkbMH9wGWmLPD9gU8AufUVWMplCvg=="
+  "resolved" "https://registry.npmjs.org/ngx-toastr/-/ngx-toastr-16.0.2.tgz"
+  "version" "16.0.2"
+  dependencies:
+    "tslib" "^2.3.0"
 
 "nice-try@^1.0.4":
   "integrity" "sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ=="

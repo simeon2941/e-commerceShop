@@ -1,10 +1,16 @@
 <div *ngIf="user">
-  <h2>{{user.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{user.id}}</div>
-  <div>
-    <label for="hero-name">User name: </label>
-    <input id="hero-name" [(ngModel)]="user.name" placeholder="Hero name"/>
+  <h2 class="uk-text-uppercase">{{user.name}} Details</h2>
+  <div class="uk-flex">
+    <div class="uk-margin-right">
+      <span class="uk-text-muted">id: </span>{{user.id}}
+    </div>
   </div>
-  <button type="button" (click)="goBack()">go back</button>
-  <button type="button" (click)="save()">save</button>
+  <div class="uk-margin">
+    <label class="uk-form-label" for="hero-name">User name: </label>
+    <div class="uk-form-controls">
+      <input class="uk-input" id="hero-name" [(ngModel)]="user.name" placeholder="Hero name"/>
+    </div>
+  </div>
+  <button class="uk-button uk-button-default" type="button" (click)="goBack()">go back</button>
+  <button class="uk-button uk-button-primary" type="button" (click)="save()">save</button>
 </div>
