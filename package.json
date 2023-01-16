@@ -45,6 +45,8 @@
     "express-oauth2-jwt-bearer": "^1.1.0",
     "helmet": "^4.6.0",
     "jquery": "^3.6.1",
+    "json5": "^2.2.3",
+    "loader-utils": "^3.2.1",
     "mdb-angular-ui-kit": "^3.0.0",
     "morgan": "^1.10.0",
     "ngx-highlightjs": "^4.1.4",
