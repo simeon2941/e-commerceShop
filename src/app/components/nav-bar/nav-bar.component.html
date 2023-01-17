@@ -9,9 +9,10 @@
           <li>
             <a routerLink="/" class="nav-link">Home</a>
           </li>
-          <li>
+          <li *ngIf="(auth.isAuthenticated$ | async) === true">
             <a routerLink="dashboard" class="nav-link">Dashboard</a>
           </li>
+
           <li>
             <a routerLink="/cart">
               <i class="material-icons">shopping_cart</i> Checkout
