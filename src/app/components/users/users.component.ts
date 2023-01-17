@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
-// import { Hero } from '../../hero';
-// import { HeroService } from '../../hero.service';
 
 import { User } from '../../users';
 import {UserService} from '../../user.service';
@@ -12,9 +11,18 @@ import {UserService} from '../../user.service';
   styleUrls: ['./users.component.css']
 })
 export class HeroesComponent implements OnInit {
+  newUser = {
+    id: '',
+    name: '',
+    lastName: '',
+    email: '',
+    isAdmin:'',
+  };
   users: User[] = [];
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService,
+    private snackBar: MatSnackBar
+    ) { }
 
   ngOnInit(): void {
     this.getUsers();
@@ -25,18 +33,29 @@ export class HeroesComponent implements OnInit {
     .subscribe(users => this.users = users);
   }
 
-  add(name: string): void {
+
+
+  add(): void {
+    let { name, lastName, email,isAdmin } = this.newUser;
     name = name.trim();
     if (!name) { return; }
-    this.userService.addUser({ name } as User)
+    this.userService.addUser({ name,lastName,email } as User)
       .subscribe(user => {
         this.users.push(user);
       });
+
+
   }
 
   delete(user: User): void {
     this.users = this.users.filter(h => h !== user);
-    this.userService.deleteUser(user.id).subscribe();
+    this.userService.deleteUser(user.id).subscribe(
+      () => {
+         this.snackBar.open(`User ${user.name} has been deleted`, 'Close', {
+          duration: 3000,
+         });
+      }
+  );
   }
 
 }
