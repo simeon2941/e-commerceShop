@@ -1,20 +1,67 @@
-<h2 class="uk-heading-line uk-text-center"><span>My Heroes</span></h2>
-<div class="uk-margin">
-  <label class="uk-form-label" for="new-hero">User name: </label>
-  <div class="uk-form-controls">
-    <input class="uk-input" id="new-hero" #heroName />
-  </div>
-</div>
-<button type="button" class="uk-button uk-button-primary uk-align-center" (click)="add(heroName.value); heroName.value=''">
-Add user
-</button>
+<form class="uk-form-horizontal">
 
-<ul class="uk-list uk-list-striped">
-  <li *ngFor="let hero of users">
-    <a routerLink="/detail/{{hero.id}}">
-      <span class="uk-label">{{hero.id}}</span> {{hero.name}}
-    </a>
-    <button type="button" class="uk-button uk-button-danger uk-align-right" title="delete hero"
-      (click)="delete(hero)">Delete</button>
-  </li>
-</ul>
+
+  <div class="uk-margin">
+    <label class="uk-form-label" for="form-horizontal-text">Name</label>
+    <div class="uk-form-controls">
+      <input class="uk-input" type="text" [(ngModel)]="newUser.name" name="name" placeholder="Enter Name" required>
+    </div>
+  </div>
+
+  <div class="uk-margin">
+    <label class="uk-form-label" for="form-horizontal-text">Last Name</label>
+    <div class="uk-form-controls">
+      <input class="uk-input" type="text" [(ngModel)]="newUser.lastName" name="lastName" placeholder="Enter Last Name" required>
+    </div>
+  </div>
+
+  <div class="uk-margin">
+    <label class="uk-form-label" for="form-horizontal-text">Email</label>
+    <div class="uk-form-controls">
+      <input class="uk-input" type="email" [(ngModel)]="newUser.email" name="email" placeholder="Enter e-mail address" required>
+    </div>
+  </div>
+
+  <div class="uk-margin">
+    <label class="uk-form-label" for="form-horizontal-text">Is Admin</label>
+    <div class="uk-form-controls">
+      <select [(ngModel)]="newUser.isAdmin" name="isAdmin" aria-label="isAdmin-select"  required>
+        <option value="true">True</option>
+        <option value="false">False</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="uk-margin">
+    <button class="uk-button uk-button-primary" (click)="add();">Add User</button>
+  </div>
+</form>
+
+
+
+
+
+<h2>User maintenance: </h2>
+<table class="uk-table uk-table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Is Admin</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.id}}</td>
+      <td>{{user.name}} {{user.lastName}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.isAdmin}}</td>
+      <td>
+        <button class="uk-icon-button" uk-icon="icon: trash" title="delete user" (click)="delete(user)"></button>
+        <button class="uk-icon-button" uk-icon="icon: pencil" title="edit user"  routerLink="/detail/{{user.id}}"></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
