@@ -1,0 +1,30 @@
+<h2>Product List:</h2>
+<table class="uk-table uk-table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>ImageUrl</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.description}}</td>
+      <td>{{product.imageUrl}}</td>
+      <td>
+        <img [src]="product.imageUrl" alt="{{product.name}}">
+
+      </td>
+      <td>
+        <button class="uk-icon-button" uk-icon="icon: trash" title="delete product"></button>
+        <button class="uk-icon-button" uk-icon="icon: pencil" title="edit product"  routerLink="/productCRUID/{{product.id}}"></button>
+      </td>
+    </tr>
+  </tbody>
+</table>

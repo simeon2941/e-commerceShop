@@ -24,13 +24,6 @@ export class UserService {
     private http: HttpClient,
     private messageService: MessageService) { }
 
-    // getUsers(): Observable<User[]> {
-    //   return this.http.get<User[]>(this.usersUrl)
-    //     .pipe(
-    //       tap(_ => this.log('fetched users')),
-    //       catchError(this.handleError<User[]>('getUsers', []))
-    //     );
-    // }
 
     getUsers (): Observable<User[]> {
       return this.http.get<User[]>(this.usersUrl)

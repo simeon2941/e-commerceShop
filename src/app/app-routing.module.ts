@@ -11,6 +11,8 @@ import { HomeContentComponent } from './components/home-content/home-content.com
 import { ProductDetailsComponent } from './components/product-detail/product-details.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductMaintenanceComponent } from './product-maintenance/product-maintenance.component';
 
 const routes: Routes = [
 
@@ -26,10 +28,16 @@ const routes: Routes = [
   },
 
   { path: 'detail/:id', component: UserDetailComponent },
+  { path: 'productCRUID/:id', component: ProductMaintenanceComponent },
   { path: 'cart', component: CartComponent},
   {
     path: 'dashboard',
     component: DashboardComponent,
+
+  },
+  {
+    path: 'products',
+    component: ProductsComponent,
 
   },
   {

@@ -1,5 +1,5 @@
 <div *ngIf="user">
-  <h2 class="uk-text-uppercase">{{user.name}} Details</h2>
+  <h2 class="uk-text-uppercase">{{user.name}}'s Details</h2>
   <div class="uk-flex">
     <div class="uk-margin-right">
       <span class="uk-text-muted">id: </span>{{user.id}}
@@ -9,6 +9,9 @@
     <label class="uk-form-label" for="hero-name">User name: </label>
     <div class="uk-form-controls">
       <input class="uk-input" id="hero-name" [(ngModel)]="user.name" placeholder="Hero name"/>
+    </div>
+    <div class="uk-form-controls">
+      <input class="uk-input" id="hero-lastname" [(ngModel)]="user.lastName" placeholder="Hero lastNamename"/>
     </div>
   </div>
   <button class="uk-button uk-button-default" type="button" (click)="goBack()">go back</button>
