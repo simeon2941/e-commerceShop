@@ -41,7 +41,7 @@ export class ProductService {
 
   /** GET Product by id. Will 404 if id not found */
 getProduct(id: number): Observable<Product> {
-  const url = `${this.getProducts}/${id}`;
+  const url = `${this.productsUrl}/${id}`;
   return this.http.get<Product>(url).pipe(
     tap(_ => this.log(`fetched Product id=${id}`)),
     catchError(this.handleError<Product>(`getProduct id=${id}`))
@@ -82,13 +82,13 @@ deleteProduct(id: number): Observable<Product> {
   );
 }
 
-// /** PUT: update the Product on the server */
-// updateProduct(Product: Product): Observable<any> {
-//   return this.http.put(this.getProducts, Product, this.httpOptions).pipe(
-//     tap(_ => this.log(`updated Product id=${Product.id}`)),
-//     catchError(this.handleError<any>('updateProduct'))
-//   );
-// }
+/** PUT: update the Product on the server */
+updateProduct(Product: Product): Observable<any> {
+  return this.http.put(this.productsUrl, Product, this.httpOptions).pipe(
+    tap(_ => this.log(`updated Product id=${Product.id}`)),
+    catchError(this.handleError<any>('updateProduct'))
+  );
+}
 
 /**
  * Handle Http operation that failed.
