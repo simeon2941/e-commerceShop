@@ -10,11 +10,15 @@
             <a routerLink="/" class="nav-link">Home</a>
           </li>
           <li *ngIf="(auth.isAuthenticated$ | async) === true">
-            <a routerLink="dashboard" class="nav-link">Dashboard</a>
+            <a  class="nav-link" mat-button [matMenuTriggerFor]="menu">Admin</a>
+            <mat-menu #menu="matMenu">
+              <a routerLink="dashboard"  class="nav-link" mat-menu-item>Users</a>
+              <a routerLink="products" class="nav-link" mat-menu-item>Products</a>
+            </mat-menu>
           </li>
 
           <li>
-            <a routerLink="/cart">
+            <a routerLink="/cart" class="nav-link">
               <i class="material-icons">shopping_cart</i> Checkout
             </a>
           </li>
@@ -24,19 +28,21 @@
         <div class="uk-navbar-right">
           <ul class="uk-navbar-nav">
             <li class="uk-hidden@md" *ngIf="(auth.isAuthenticated$ | async) === false">
-              <button id="qsLoginBtn" class="uk-button uk-button-primary uk-margin-small-right" (click)="loginWithRedirect()">
+              <button id="qsLoginBtn" class="uk-button uk-button-primary uk-margin-small-right"
+                (click)="loginWithRedirect()">
                 Log in
               </button>
             </li>
             <li *ngIf="auth.user$ | async as user" class="uk-visible@md">
               <a href="#" id="profileDropDown" class="uk-navbar-toggle" uk-toggle="target: #profile-dropdown">
-                <img [src]="user.picture" alt="Profile picture" class="uk-border-circle" style="width: 40px; height: 40px;">
+                <img [src]="user.picture" alt="Profile picture" class="uk-border-circle"
+                  style="width: 40px; height: 40px;">
               </a>
               <div id="profile-dropdown" uk-dropdown="mode: click">
                 <ul class="uk-nav uk-dropdown-nav">
                   <li>{{ user.name }}</li>
                   <li>
-                    <a routerLink="/profile" >
+                    <a routerLink="/profile">
                       Profile
                     </a>
                   </li>

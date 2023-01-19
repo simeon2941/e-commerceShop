@@ -17,14 +17,15 @@ import { HomeContentComponent } from './components/home-content/home-content.com
 import { LoadingComponent } from './components/loading/loading.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS,HttpClient  } from '@angular/common/http';
 import { AuthHttpInterceptor, AuthModule } from '@auth0/auth0-angular';
 import { environment as env } from '../environments/environment';
 import { SubMenuComponent } from './components/sub-menu/sub-menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from '../app/in-memory-data.service';
+import { InMemoryDataService } from './in-memory-data.service';
+
 import { HeroesComponent } from './components/users/users.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
@@ -52,6 +53,8 @@ import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
 import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
+import { ProductsComponent } from './products/products.component';
+import { ProductMaintenanceComponent } from './product-maintenance/product-maintenance.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +74,9 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
     HeroSearchComponent,
     ProductDetailsComponent,
     CartComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductsComponent,
+    ProductMaintenanceComponent
   ],
   imports: [
     BrowserModule,
@@ -80,6 +85,7 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
+
     NgbModule,
     MatGridListModule,
     FontAwesomeModule,
@@ -138,4 +144,10 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+
+  constructor(private http: HttpClient) {
+    http.get('api/users');
+    http.get('api/products');
+  }
+}
