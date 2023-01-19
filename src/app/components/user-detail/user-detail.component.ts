@@ -14,12 +14,15 @@ import {UserService} from '../../user.service';
 })
 export class UserDetailComponent implements OnInit {
   user: User | undefined;
-
+  originalUser: User | undefined;
   constructor(
     private route: ActivatedRoute,
     private userService: UserService,
     private location: Location
-  ) {}
+  ) {
+
+    this.originalUser = this.user;
+  }
 
   ngOnInit(): void {
     this.getUser();

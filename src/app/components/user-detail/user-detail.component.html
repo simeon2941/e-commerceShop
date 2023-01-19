@@ -8,12 +8,24 @@
   <div class="uk-margin">
     <label class="uk-form-label" for="hero-name">User name: </label>
     <div class="uk-form-controls">
-      <input class="uk-input" id="hero-name" [(ngModel)]="user.name" placeholder="Hero name"/>
+      <input class="uk-input" id="hero-name" [(ngModel)]="user.name" placeholder="User name"/>
     </div>
     <div class="uk-form-controls">
-      <input class="uk-input" id="hero-lastname" [(ngModel)]="user.lastName" placeholder="Hero lastNamename"/>
+      <label class="uk-form-label" for="hero-lastname">Last name: </label>
+      <input class="uk-input" id="hero-lastname" [(ngModel)]="user.lastName" placeholder="Last name"/>
+    </div>
+    <div class="uk-form-controls">
+      <label class="uk-form-label" for="hero-email">Email: </label>
+      <input class="uk-input" id="hero-email" [(ngModel)]="user.email" placeholder="Email"/>
+    </div>
+    <div class="uk-form-controls">
+      <label class="uk-form-label" for="hero-isAdmin">Is admin: </label>
+      <select class="uk-select" id="hero-isAdmin" [(ngModel)]="user.isAdmin">
+        <option value="true">True</option>
+        <option value="false">False</option>
+      </select>
     </div>
   </div>
   <button class="uk-button uk-button-default" type="button" (click)="goBack()">go back</button>
-  <button class="uk-button uk-button-primary" type="button" (click)="save()">save</button>
+  <button class="uk-button uk-button-primary"  type="button" (click)="save()">save</button>
 </div>
