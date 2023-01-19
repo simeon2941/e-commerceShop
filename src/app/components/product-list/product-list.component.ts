@@ -31,5 +31,7 @@ export class ProductListComponent {
   onNotify() {
     alert('You will be notified when product goes on sale!')
   }
+
+
 }
 
