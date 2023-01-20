@@ -55,6 +55,7 @@ import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { ProductsComponent } from './products/products.component';
 import { ProductMaintenanceComponent } from './product-maintenance/product-maintenance.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { ProductMaintenanceComponent } from './product-maintenance/product-maint
     CartComponent,
     ProductListComponent,
     ProductsComponent,
-    ProductMaintenanceComponent
+    ProductMaintenanceComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,

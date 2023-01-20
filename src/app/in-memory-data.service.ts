@@ -31,6 +31,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "price": 799,
         "description": "A large phone with one of the best screens",
         "imageUrl" :"https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?ixlib=rb-4.0.3&ix'id'=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1626&q=80"
+        ,"productQuantity":10
       },
       {
         "id": 2,
@@ -38,6 +39,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "price": 699,
         "description": "A great phone with one of the best cameras",
         "imageUrl" :"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ix'id'=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+        ,"productQuantity":10
       },
       {
         "id": 3,
@@ -45,7 +47,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "price": 599,
         "description": "Phone Standard",
         "imageUrl" :"https://images.unsplash.com/photo-1550792173-5220eacae50e?ixlib=rb-4.0.3&ix'id'=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGFwcGxlJTIwcHJvZHVjdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-
+        ,"productQuantity":10
       },
       {
         "id": 4,
@@ -53,7 +55,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "price": 899,
         "description": "A great phone with one of the best cameras",
         "imageUrl" :"https://images.unsplash.com/photo-1605464315542-bda3e2f4e605?ixlib=rb-4.0.3&ix'id'=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGFwcGxlJTIwcHJvZHVjdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-
+        ,"productQuantity":10
       },
       {
         "id": 5,
@@ -61,7 +63,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "price": 799,
         "description": "A large phone with one of the best screens",
         "imageUrl" :"https://images.unsplash.com/photo-1505751171710-1f6d0ace5a85?ixlib=rb-4.0.3&ix'id'=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-
+        ,"productQuantity":10
       },
       {
         "id": 6,
@@ -69,7 +71,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "price": 699,
         "description": "A great phone with one of the best cameras",
         "imageUrl" :"https://images.unsplash.com/photo-1519638831568-d9897f54ed69?ixlib=rb-4.0.3&ix'id'=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-
+        ,"productQuantity":10
       },
       {
         "id": 7,
@@ -77,7 +79,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "price": 599,
         "description": "Phone Standard",
         "imageUrl" :"https://images.unsplash.com/photo-1557180295-76eee20ae8aa?ixlib=rb-4.0.3&ix'id'=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-
+        ,"productQuantity":10
       },
       {
         "id": 8,
@@ -85,7 +87,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "price": 899,
         "description": "A great phone with one of the best cameras",
         "imageUrl" :"https://images.unsplash.com/photo-1602525303392-2133aae17425?ixlib=rb-4.0.3&ix'id'=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80"
-
+        ,"productQuantity":10
       },
       {
         "id": 9,
@@ -93,7 +95,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "price": 899,
         "description": "Enjoying the beach in Rio de Janeiro, nothing to do but levitate things and have some beers.",
         "imageUrl" :"https://images.unsplash.com/photo-1506025883753-c77a55138eae?ixlib=rb-4.0.3&ix'id'=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2083&q=80"
-
+        ,"productQuantity":10
       },
       {
         "id": 10,
@@ -101,6 +103,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "price": 899,
         "description": "Enjoying the beach in Rio de Janeiro, nothing to do but levitate things and have some beers.",
         "imageUrl" :"https://images.unsplash.com/photo-1624913503273-5f9c4e980dba?ixlib=rb-4.0.3&ix'id'=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtZXJhc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+        ,"productQuantity":10
       },
       {
         "id": 11,
@@ -108,6 +111,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "price": 899,
         "description": "Enjoying the beach in Rio de Janeiro, nothing to do but levitate things and have some beers.",
         "imageUrl" :"https://images.unsplash.com/photo-1531525645387-7f14be1bdbbd?ixlib=rb-4.0.3&ix'id'=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+        ,"productQuantity":10
       },
       {
         "id": 12,
@@ -115,6 +119,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "price": 899,
         "description": "Enjoying the beach in Rio de Janeiro, nothing to do but levitate things and have some beers.",
         "imageUrl" :"https://images.unsplash.com/photo-1624911266025-6464db314f40?ixlib=rb-4.0.3&ix'id'=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+        ,"productQuantity":10
       },
       {
         "id": 13,
@@ -122,6 +127,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "price": 899,
         "description": "GameBoy Clear",
         "imageUrl" :"https://images.unsplash.com/photo-1577583113753-ca7e95d1bdc6?ixlib=rb-4.0.3&ix'id'=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+        ,"productQuantity":10
       },
       {
         "id": 14,
@@ -129,6 +135,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "price": 899,
         "description": "Nintendo Game Boy",
         "imageUrl" :"https://images.unsplash.com/photo-1599933310642-8f07bdea325a?ixlib=rb-4.0.3&ix'id'=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1402&q=80"
+        ,"productQuantity":10
       },
       {
         "id": 15,
@@ -136,6 +143,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "price": 899,
         "description": "Nintendo Game Boy",
         "imageUrl" :"https://images.unsplash.com/photo-1599933310642-8f07bdea325a?ixlib=rb-4.0.3&ix'id'=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1402&q=80"
+        ,"productQuantity":10
       },
       {
         "id": 16,
@@ -143,6 +151,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "price": 899,
         "description": "Nintendo Game Boy",
         "imageUrl" :"https://images.unsplash.com/photo-1599933310642-8f07bdea325a?ixlib=rb-4.0.3&ix'id'=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1402&q=80"
+        ,"productQuantity":10
       },
       {
         "id": 17,
@@ -150,6 +159,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "price": 899,
         "description": "Nintendo Game Boy",
         "imageUrl" :"https://images.unsplash.com/photo-1599933310642-8f07bdea325a?ixlib=rb-4.0.3&ix'id'=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1402&q=80"
+        ,"productQuantity":10
       },
       {
         "id": 18,
@@ -157,6 +167,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "price": 899,
         "description": "Nintendo Game Boy",
         "imageUrl" :"https://images.unsplash.com/photo-1599933310642-8f07bdea325a?ixlib=rb-4.0.3&ix'id'=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1402&q=80"
+        ,"productQuantity":10
       },
       {
         "id": 19,
@@ -164,6 +175,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "price": 899,
         "description": "Nintendo Game Boy",
         "imageUrl" :"https://images.unsplash.com/photo-1599933310642-8f07bdea325a?ixlib=rb-4.0.3&ix'id'=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1402&q=80"
+        ,"productQuantity":10
       },
       {
         "id": 20,
@@ -171,6 +183,7 @@ export class InMemoryDataService implements InMemoryDbService {
         "price": 899,
         "description": "Nintendo Game Boy",
         "imageUrl" :"https://images.unsplash.com/photo-1599933310642-8f07bdea325a?ixlib=rb-4.0.3&ix'id'=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1402&q=80"
+        ,"productQuantity":10
       }
     ]
 
