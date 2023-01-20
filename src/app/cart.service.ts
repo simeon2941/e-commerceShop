@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Product } from './products';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -8,15 +9,33 @@ import { Product } from './products';
 export class CartService {
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private router: Router
   ) {}
 
   items: Product[] = [];
-
-  addToCart(product: Product) {
-    this.items.push(product);
+  removed = false;
+  
+  addToCart(product: Product, quantity = 1) {
+    this.items.push({ ...product, productQuantity: quantity });
+}
+  addProduct(product: Product, productQuantity = 1) {
+    this.items.push({...product, productQuantity});
+  }
+  incrementQuantity(item: Product) {
+    item.productQuantity++;
   }
 
+  decrementQuantity(item: Product) {
+    if (item.productQuantity > 1) {
+      item.productQuantity--;
+    }
+  }
+  removeProduct(item: Product) {
+    this.items = this.items.filter(i => i !== item);
+    this.removed = true;
+
+  }
   getItems() {
     return this.items;
   }
@@ -26,8 +45,8 @@ export class CartService {
     return this.items;
   }
 
-  getShippingPrices() {
-    return this.http.get<{type: string, price: number}[]>('/assets/shipping.json');
+  getTotalCost() {
+    return this.items.reduce((acc, item) => acc + (item.productQuantity * item.price), 0);
   }
 
 }
